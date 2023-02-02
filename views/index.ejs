@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ronaldo OR Messi??? ⚽️ 🐐</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://replit.com/public/js/repl-auth-v2.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Ronaldo or Messi???</h1>
+    <div id="counter">
+      <h2>
+        <span id="isWinning"> <%- votes.winning %> </span>
+      </h2>
+      <h3>
+        Ronaldo:
+        <span id="ronaldoVoters"> <%- votes.ronaldoVoters %> </span>
+      </h3>
+      <h3>
+        Messi:
+        <span id="messiVoters"> <%- votes.messiVoters %> </span>
+      </h3>
+    </div>
+
+    <% if (loggedIn) { %>
+    <div id="vote-container">
+      <div id="vote">
+        <% if (userAlreadyVoted) { %>
+        <h3>You've already voted!</h3>
+        <% } else { %>
+        <h2>Vote:</h2>
+        <h3>You can only vote once!</h3>
+        <div id="players">
+          <div id="ronaldoBtn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
+              alt="ronaldo"
+              height="300"
+            />
+          </div>
+          <div id="messiBtn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg"
+              alt="messi"
+              height="300"
+            />
+          </div>
+        </div>
+        <h3 id="loading"></h3>
+        <% } %>
+      </div>
+    </div>
+    <% } else { %>
+    <div id="login">
+      <h2>Please login to vote.</h2>
+      <button onclick="LoginWithReplit();">Login</button>
+      <p id="login-description">
+        The only reason why you need to log in is to prevent people from
+        spam-clicking votes. Your username will be encrypted in the database and
+        therefore will remain hidden to the public.
+      </p>
+    </div>
+    <% } %>
+    <br />
+    <p>
+      View on
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://replit.com/@eesazahed/Ronaldo-or-Messi?v=1"
+        >Replit</a
+      >
+    </p>
+		<p>
+      View a
+      <a
+				id="fancylink"
+        rel="noreferrer"
+        target="_blank"
+        href="https://ronaldo-or-messi-data-visualization.eesazahed.repl.co/"
+        >data visualization</a
+      >
+    </p>
+    <br />
+    <script src="index.js"></script>
+  </body>
+</html>
