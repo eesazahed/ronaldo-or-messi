@@ -7,5 +7,3 @@ Built with:
 - Sequelize
 - EJS
 - Replit Auth
-
-View the original project on [Replit](https://replit.com/@eesazahed/Ronaldo-or-Messi?v=1).

@@ -9,9 +9,15 @@ const Vote = sequelize.define("Vote", {
   },
   username: {
     type: DataTypes.STRING,
+		allowNull: true,
+  },
+	userid: {
+    type: DataTypes.STRING,
+		allowNull: true,
   },
   option: {
     type: DataTypes.INTEGER,
+		allowNull: false,
   },
 });
 
